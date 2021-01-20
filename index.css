@@ -1,0 +1,102 @@
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    background-color: rgb(0, 38, 44);
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+h1 {
+    font-size: 50pt;
+    color: #A5A5A5;
+    padding: 0 10px;
+    background-color: black;
+    border-radius: 30px;
+    position: relative;
+    left: 3px;
+}
+
+h1 span {
+    color: white;
+}
+
+#container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#calcContainer {
+    width: 300px;
+    height: 500px;
+    padding: 7px;
+    background-color: black;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 16.67% 16.67% 16.67% 16.67% 16.67% 16.67%;
+}
+
+button {
+    border: none;
+    border-radius: 15px;
+    outline: none;
+    font-size: 20pt;
+    margin: 2px;
+}
+
+#display {
+    position: relative;
+    grid-column: 1/5;
+}
+
+#text {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 55pt;
+    color:white
+}
+
+#zero {
+    grid-column: span 2;
+}
+
+.grey {
+    background-color: #A5A5A5;
+}
+
+.grey:hover {
+    background-color: #D9D9D9;
+}
+
+.yellow {
+    background-color: #FE9F0A;
+    color: white;
+}
+
+.yellow:hover {
+    background-color: #FDC68D;
+}
+
+.yellowActive, .yellowActive:hover{
+    background-color: white;
+    color: #FE9F0A
+}
+
+.darkGrey {
+    background-color: #333333;
+    color: white;
+}
+
+.darkGrey:hover {
+    background-color: #737373;
+}
+
+.yellowText {
+    color: #FE9F0A;
+}
