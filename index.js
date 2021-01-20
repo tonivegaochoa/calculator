@@ -42,21 +42,19 @@ function operate() {
             displayValue = mod(a, b);
     }
 
-    console.log(displayValue);
     a = Number(displayValue);
     b = null;
     operator = null;
     isDecimal = false;
     currentOperator = null;
+    enteringSecond = false;
 
     displayValue = String(displayValue);
     if(a >= 100000000) {
-        console.log("her");
         let exp = String(Math.log10(a))[0];
         displayValue = displayValue[0] + '.' + displayValue.slice(1,3) + `E${exp}`;
     } else if(displayValue.length > 8) {
         displayValue = displayValue.slice(0,8);
-        console.log("here");
     }
 
     populateDisplay();
@@ -69,7 +67,7 @@ function populateDisplay() {
 function updateDisplayValue() {
     if(displayValue.length === 8 && operator === null) return;
 
-    if(displayValue === '0' || enteringSecond) {
+    if(displayValue === '0' || enteringSecond || operator === null) {
         displayValue = '';
         if(enteringSecond) enteringSecond = false;
     } 
